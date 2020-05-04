@@ -1,0 +1,13 @@
+.PHONY: test
+
+.PHONY: migrations_init_test
+migrations_init_test:
+	mysql -uroot -p'***' -e "DROP DATABASE IF EXISTS small_assignment_test; CREATE DATABASE small_assignment_test;" && \
+	mysql -uroot -p'***' small_assignment_test < ./sql/init.sql
+
+test: migrations_init_test
+	go test -v ./cache/...
+	go test -v ./handler/...
+	go test -v ./milli/...
+	go test -v ./mware/...
+

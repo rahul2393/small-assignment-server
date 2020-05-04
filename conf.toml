@@ -1,0 +1,5 @@
+dsn = "root:***@tcp(localhost:3306)/small_assignment?parseTime=true"
+cert_path = "/home/ubuntu/cert/cert.pem"
+key_path = "/home/ubuntu/cert/key.pem"
+log_path = "/Users/rahulyadav/log/small-assignments.log"
+test_dsn = "root:***@tcp(localhost:3306)/small_assignment_test?parseTime=true"
